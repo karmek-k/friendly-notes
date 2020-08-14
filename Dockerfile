@@ -13,3 +13,5 @@ ADD . .
 
 RUN useradd user
 USER user
+
+EXPOSE 8000
