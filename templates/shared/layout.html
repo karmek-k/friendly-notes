@@ -5,20 +5,21 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link 
+      rel="stylesheet"
+      href="{% static 'shared/css/layout.css' %}"
+    />
+    <link 
+      rel="stylesheet"
+      href="{% static 'shared/css/navbar.css' %}"
+    />
     <title>
       {% block title %}{% endblock %} - Friendly Notes
     </title>
   </head>
   <body>
-    <h1>Friendly Notes</h1>
-    <nav>
-      <ul>
-        <li>Main Page</li>
-        <li>Add a Note</li>
-        <li>Random Note</li>
-      </ul>
-    </nav>
-    <main>
+    {% include 'shared/navbar.html' %}
+    <main class="container">
       {% block content %}{% endblock %}
     </main>
   </body>
