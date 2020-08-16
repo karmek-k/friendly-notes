@@ -1,3 +1,5 @@
+{% load i18n %}
+
 <nav class="navbar">
   <h1>
     <a href="{% url 'note:index' %}">
@@ -7,17 +9,17 @@
   <ul>
     <li>
       <a href="{% url 'note:index' %}">
-        Main Page
+        {% translate 'Main Page' %}
       </a>
     </li>
     <li>
       <a href="{% url 'note:add' %}">
-        Add a Note
+        {% translate 'Add a Note' %}
       </a>
     </li>
     <li>
       <a href="{% url 'note:random' %}">
-        Random Note
+        {% translate 'Random Note' %}
       </a>
     </li>
   </ul>

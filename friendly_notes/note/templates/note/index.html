@@ -1,5 +1,5 @@
 {% extends 'shared/layout.html' %}
-{% load static %}
+{% load static i18n %}
 
 {% block title %}
 Index
@@ -21,18 +21,18 @@ Index
   Above you can see three links:
   <ol class="index-list">
     <li>
-      Main Page - the page you're currently reading.
+      {% translate 'Main Page' %} - the page you're currently reading.
     </li>
     <li>
-      Add a Note - here you can, well, add a note.
+      {% translate 'Add a Note' %} - here you can, well, add a note.
     </li>
     <li>
-      Random Note - a random note that has been posted.
+      {% translate 'Random Note' %} - a random note that has been posted.
     </li>
   </ol>
 </p>
 <p>
   Possibly, there will be a REST API in the future, so that
-  you'll be able to add notes without even visiting this site. 
+  you'll be able to add notes without even visiting this site.
 </p>
 {% endblock %}
