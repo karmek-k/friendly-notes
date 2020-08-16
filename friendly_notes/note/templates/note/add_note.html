@@ -1,8 +1,8 @@
 {% extends 'shared/layout.html' %}
-{% load static %}
+{% load static i18n %}
 
 {% block title %}
-{{ object.title }}
+{% translate 'Add a note' %}
 {% endblock %}
 
 {% block css %}
@@ -10,10 +10,9 @@
 {% endblock %}
 
 {% block content %}
-<h2>{{ object.title }}</h2>
-<i>Created on {{ object.date | date }}</i>
-<br />
-<textarea readonly>
-  {{ object.content }}
-</textarea>
+<form method="POST">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <input type="submit" value="{% translate 'Add' %}" />
+</form>
 {% endblock %}

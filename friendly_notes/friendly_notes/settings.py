@@ -140,3 +140,7 @@ STATICFILES_DIRS = [
 
 # ----------- #
 AUTH_USER_MODEL = 'user.User'
+
+LOCALE_PATHS = [
+    BASE_DIR / 'locale'
+]
