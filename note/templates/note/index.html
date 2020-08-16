@@ -1,12 +1,40 @@
 {% extends 'shared/layout.html' %}
+{% load static %}
 
 {% block title %}
 Index
 {% endblock %}
 
+{% block css %}
+<link rel="stylesheet" href="{% static 'note/css/index.css' %}" />
+{% endblock %}
+
 {% block content %}
-Lorem ipsum dolor sit amet consectetur adipisicing elit.
-Asperiores ullam ipsum sed aperiam repellendus libero.
-Rerum quae et illo ex blanditiis totam dolores aut.
-Cupiditate perferendis laudantium earum doloremque consequuntur.
+<h2>
+  Welcome to Friendly Notes!
+</h2>
+<p>
+  This is an anonymous service that lets you paste 
+  and share code / text. These pastes are called <b>notes</b>
+  and you can make them private 
+  or public - it's completely up to you.
+</p>
+<p>
+  Above you can see three links:
+  <ol class="index-list">
+    <li>
+      Main Page - the page you're currently reading.
+    </li>
+    <li>
+      Add a Note - here you can, well, add a note.
+    </li>
+    <li>
+      Random Note - a random note that has been set public.
+    </li>
+  </ol>
+</p>
+<p>
+  Possibly, there will be a REST API in the future, so that
+  you'll be able to add notes without even visiting this site. 
+</p>
 {% endblock %}
