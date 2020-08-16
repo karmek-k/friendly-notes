@@ -5,21 +5,24 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'shared/css/layout.css' %}" />
+    <link rel="stylesheet" href="{% static 'shared/css/navbar.css' %}" />
+    <link 
+      href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
+    {% block css %}{% endblock %}
     <title>
       {% block title %}{% endblock %} - Friendly Notes
     </title>
   </head>
   <body>
-    <h1>Friendly Notes</h1>
-    <nav>
-      <ul>
-        <li>Main Page</li>
-        <li>Add a Note</li>
-        <li>Random Note</li>
-      </ul>
-    </nav>
-    <main>
+    {% include 'shared/navbar.html' %}
+    <main class="container">
       {% block content %}{% endblock %}
     </main>
+    <footer>
+      This website on <a href="//github.com/karmek-k/friendly-notes">GitHub</a>
+    </footer>
   </body>
 </html>

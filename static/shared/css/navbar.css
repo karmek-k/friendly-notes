@@ -1,0 +1,28 @@
+.navbar {
+  padding: 1.5rem;
+  padding-bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #015bc2;
+}
+
+.navbar h1 {
+  font-size: 3rem;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: white;
+}
+
+.navbar ul {
+  margin: 0;
+  background: #006de9;
+}
+
+.navbar li {
+  margin: 1rem;
+  list-style: none;
+  display: inline-block;
+}

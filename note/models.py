@@ -1,4 +1,5 @@
 from django.db import models
+from django.urls import reverse
 
 from note.lexer_choices import ALL_LEXER_CHOICES
 
@@ -15,3 +16,6 @@ class Note(models.Model):
 
     def __str__(self):
         return self.title
+
+    def get_absolute_url(self):
+        return reverse('note:get', kwargs={'pk': self.pk})
