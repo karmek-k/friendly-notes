@@ -1,0 +1,142 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-08-16 16:37+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n"
+"%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n"
+"%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
+
+#: note/models.py:11
+msgid "title"
+msgstr "tytuł"
+
+#: note/models.py:13
+msgid "content"
+msgstr "zawartość"
+
+#: note/models.py:16
+msgid "date"
+msgstr "data"
+
+#: note/models.py:22
+msgid "language"
+msgstr "język"
+
+#: note/models.py:26
+msgid "note"
+msgstr "notatka"
+
+#: note/models.py:27
+msgid "notes"
+msgstr "notatki"
+
+#: note/templates/note/add_note.html:5
+#, fuzzy
+#| msgid "Add a Note"
+msgid "Add a note"
+msgstr "Dodaj notatkę"
+
+#: note/templates/note/add_note.html:16
+msgid "Add"
+msgstr "Dodaj"
+
+#: note/templates/note/get_note.html:14
+msgid "Created on"
+msgstr "Stworzona w dniu"
+
+#: note/templates/note/index.html:5
+msgid "Index"
+msgstr "Indeks"
+
+#: note/templates/note/index.html:14
+msgid "Welcome to Friendly Notes!"
+msgstr "Witaj w Friendly Notes!"
+
+#: note/templates/note/index.html:17
+msgid ""
+"\n"
+"  This is an anonymous service that lets you paste \n"
+"  and share code / text. These pastes are called <b>notes</b>.\n"
+"  "
+msgstr ""
+"\n"
+"  To anonimowa usługa pozwalająca na wklejanie \n"
+"  i udostępnianie kodu lub tekstu. Te wklejki to <b>notatki</b>.\n"
+"  "
+
+#: note/templates/note/index.html:23
+msgid "Above you can see three links:"
+msgstr "Powyżej można zauważyć trzy linki:"
+
+#: note/templates/note/index.html:26 templates/shared/navbar.html:12
+msgid "Main Page"
+msgstr "Strona główna"
+
+#: note/templates/note/index.html:26
+msgid "the page you're currently reading."
+msgstr "strona, którą właśnie czytasz."
+
+#: note/templates/note/index.html:29 templates/shared/navbar.html:17
+msgid "Add a Note"
+msgstr "Dodaj notatkę"
+
+#: note/templates/note/index.html:29
+msgid "here you can, well, add a note."
+msgstr "tutaj możesz - cóż - dodać notatkę."
+
+#: note/templates/note/index.html:32 templates/shared/navbar.html:22
+msgid "Random Note"
+msgstr "Losowa notatka"
+
+#: note/templates/note/index.html:32
+msgid "a random note that has been posted."
+msgstr "losowa notatka, która została zapostowana."
+
+#: note/templates/note/index.html:37
+msgid ""
+"\n"
+"  Possibly, there will be a REST API in the future, so that\n"
+"  you'll be able to add notes without even visiting this site.\n"
+"  "
+msgstr ""
+"\n"
+"  Możliwe, że w przyszłości powstanie REST API, żeby\n"
+"  można było dodawać notatki bez wchodzenia na tę stronę.\n"
+"  "
+
+#: note/templates/note/no_notes.html:5
+msgid "No notes"
+msgstr "Brak notatek"
+
+#: note/templates/note/no_notes.html:13
+#, python-format
+msgid ""
+"\n"
+"  There are no notes on this Friendly Notes instance!\n"
+"  Go <a href=\"%(url)s\">add one</a>.\n"
+"  "
+msgstr ""
+"\n"
+"  Na tej instancji Friendly Notes nie ma notatek!\n"
+"  <a href=\"%(url)s\">Dodaj jakąś</a>.\n"
+"  "
+
+#: templates/shared/layout.html:25
+msgid ""
+"This website on <a href=\"//github.com/karmek-k/friendly-notes\">GitHub</a>"
+msgstr ""
+"Ta strona na <a href=\"//github.com/karmek-k/friendly-notes\">GitHubie</a>"
