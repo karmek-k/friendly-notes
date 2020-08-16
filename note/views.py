@@ -12,7 +12,7 @@ class IndexView(generic.TemplateView):
 class AddNoteView(generic.CreateView):
     form_class = NoteForm
     template_name = 'note/add_note.html'
-    success_url = reverse_lazy('note:get')
+    # success_url = reverse_lazy('note:get')
 
 
 class GetNoteView(generic.DetailView):
