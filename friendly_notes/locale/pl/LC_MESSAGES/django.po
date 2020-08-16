@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-08-16 16:37+0000\n"
+"POT-Creation-Date: 2020-08-16 17:00+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -134,6 +134,10 @@ msgstr ""
 "  Na tej instancji Friendly Notes nie ma notatek!\n"
 "  <a href=\"%(url)s\">Dodaj jakąś</a>.\n"
 "  "
+
+#: templates/shared/layout.html:4
+msgid "en"
+msgstr "pl"
 
 #: templates/shared/layout.html:25
 msgid ""
