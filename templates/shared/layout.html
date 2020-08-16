@@ -1,0 +1,23 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      {% block title %}{% endblock %} - Friendly Notes
+    </title>
+  </head>
+  <body>
+    <h1>Friendly Notes</h1>
+    <nav>
+      <ul>
+        <li>Main Page</li>
+        <li>Add a Note</li>
+        <li>Random Note</li>
+      </ul>
+    </nav>
+    {% block content %}{% endblock %}
+  </body>
+</html>
