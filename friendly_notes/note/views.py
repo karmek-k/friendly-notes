@@ -1,4 +1,4 @@
-from random import randint
+from random import choice
 
 from django.views import generic
 from django.shortcuts import redirect, render
@@ -22,10 +22,10 @@ class GetNoteView(generic.DetailView):
 
 
 def random_note(request):
-    note_count = Note.objects.count()
+    pk_list = Note.objects.all().values_list('pk', flat=True)
 
-    if note_count:
-        random_pk = randint(1, note_count)
+    if pk_list:
+        random_pk = choice(pk_list)
         return redirect('note:get', pk=random_pk)
 
     return render(request, 'note/no_notes.html')
