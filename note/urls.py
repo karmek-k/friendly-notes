@@ -9,4 +9,5 @@ urlpatterns = [
     path('', views.IndexView.as_view(), name='index'),
     path('add/', views.AddNoteView.as_view(), name='add'),
     path('get/<int:pk>/', views.GetNoteView.as_view(), name='get'),
+    path('random/', views.random_note, name='random'),
 ]
