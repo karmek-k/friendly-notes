@@ -2,7 +2,7 @@
 {% load static i18n %}
 
 {% block title %}
-Index
+{% translate 'Index' %}
 {% endblock %}
 
 {% block css %}
@@ -11,28 +11,32 @@ Index
 
 {% block content %}
 <h2>
-  Welcome to Friendly Notes!
+  {% translate 'Welcome to Friendly Notes!' %}
 </h2>
 <p>
+  {% blocktranslate %}
   This is an anonymous service that lets you paste 
   and share code / text. These pastes are called <b>notes</b>.
+  {% endblocktranslate %}
 </p>
 <p>
-  Above you can see three links:
+  {% translate 'Above you can see three links:' %}
   <ol class="index-list">
     <li>
-      {% translate 'Main Page' %} - the page you're currently reading.
+      {% translate 'Main Page' %} - {% translate "the page you're currently reading." %}
     </li>
     <li>
-      {% translate 'Add a Note' %} - here you can, well, add a note.
+      {% translate 'Add a Note' %} - {% translate 'here you can, well, add a note.' %}
     </li>
     <li>
-      {% translate 'Random Note' %} - a random note that has been posted.
+      {% translate 'Random Note' %} - {% translate 'a random note that has been posted.' %}
     </li>
   </ol>
 </p>
 <p>
+  {% blocktranslate %}
   Possibly, there will be a REST API in the future, so that
   you'll be able to add notes without even visiting this site.
+  {% endblocktranslate %}
 </p>
 {% endblock %}

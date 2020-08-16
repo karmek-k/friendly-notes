@@ -1,8 +1,8 @@
 {% extends 'shared/layout.html' %}
-{% load static %}
+{% load static i18n %}
 
 {% block title %}
-No notes
+{% translate 'No notes' %}
 {% endblock %}
 
 {% block css %}
@@ -10,7 +10,6 @@ No notes
 
 {% block content %}
 <p>
-  There are no notes on this Friendly Notes instance!
-  Go <a href="{% url 'note:add' %}">add one</a>.
+  {% translate 'There are no notes on this Friendly Notes instance! Go <a href="{% url \'note:add\' %}">add one</a>.' %}
 </p>
 {% endblock %}

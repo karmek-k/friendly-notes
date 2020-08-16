@@ -1,8 +1,8 @@
 {% extends 'shared/layout.html' %}
-{% load static %}
+{% load static i18n %}
 
 {% block title %}
-Add a note
+{% translate 'Add a note' %}
 {% endblock %}
 
 {% block css %}
@@ -13,6 +13,6 @@ Add a note
 <form method="POST">
   {% csrf_token %}
   {{ form.as_p }}
-  <input type="submit" value="Add" />
+  <input type="submit" value="{% translate 'Add' %}" />
 </form>
 {% endblock %}
