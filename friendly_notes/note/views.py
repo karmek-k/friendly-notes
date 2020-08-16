@@ -1,6 +1,7 @@
 from random import choice
 
 from django.views import generic
+from django.urls import reverse
 from django.shortcuts import redirect, render
 
 from note.models import Note
@@ -28,4 +29,5 @@ def random_note(request):
         random_pk = choice(pk_list)
         return redirect('note:get', pk=random_pk)
 
-    return render(request, 'note/no_notes.html')
+    url = reverse('note:add')
+    return render(request, 'note/no_notes.html', {'url': url})

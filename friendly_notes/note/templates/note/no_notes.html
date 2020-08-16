@@ -10,6 +10,9 @@
 
 {% block content %}
 <p>
-  {% translate 'There are no notes on this Friendly Notes instance! Go <a href="{% url \'note:add\' %}">add one</a>.' %}
+  {% blocktranslate %}
+  There are no notes on this Friendly Notes instance!
+  Go <a href="{{ url }}">add one</a>.
+  {% endblocktranslate %}
 </p>
 {% endblock %}
