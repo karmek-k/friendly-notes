@@ -14,4 +14,4 @@ USER user
 
 EXPOSE 8000
 
-ADD . .
+ADD ./friendly_notes ./friendly_notes
