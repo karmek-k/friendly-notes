@@ -6,8 +6,13 @@ Add a note
 {% endblock %}
 
 {% block css %}
+<link rel="stylesheet" href="{% static 'note/css/add_note.css' %}" />
 {% endblock %}
 
 {% block content %}
-
+<form method="POST">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <input type="submit" value="Add" />
+</form>
 {% endblock %}
