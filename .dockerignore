@@ -2,3 +2,4 @@
 venv/
 LICENSE
 README.md
+.env
