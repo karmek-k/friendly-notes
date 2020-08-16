@@ -13,7 +13,7 @@ body {
 .container {
   padding: 1rem;
   max-width: 800px;
-  margin: auto;
+  margin: 1rem auto;
   background: silver;
 }
 

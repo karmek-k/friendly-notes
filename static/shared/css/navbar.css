@@ -1,5 +1,6 @@
 .navbar {
   padding: 1.5rem;
+  padding-bottom: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -16,7 +17,7 @@
 }
 
 .navbar ul {
-  margin: .5rem;
+  margin: 0;
   background: #006de9;
 }
 
