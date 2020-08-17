@@ -1,5 +1,5 @@
 {% extends 'shared/layout.html' %}
-{% load static i18n %}
+{% load static i18n pygmentify_tags %}
 
 {% block title %}
 {{ object.title }}
@@ -7,13 +7,18 @@
 
 {% block css %}
 <link rel="stylesheet" href="{% static 'note/css/textarea.css' %}" />
+<link rel="stylesheet" href="{% pygmentify_css %}" />
 {% endblock %}
 
 {% block content %}
 <h2>{{ object.title }}</h2>
 <i>{% translate 'Created on' %} {{ object.date | date }}</i>
 <br />
-<textarea readonly>
+
+{% pygmentify %}
+<pre lang="{{ object.language }}">
   {{ object.content }}
-</textarea>
+</pre>
+{% endpygmentify %}
+
 {% endblock %}
