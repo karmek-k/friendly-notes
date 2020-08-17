@@ -5,3 +5,9 @@ textarea {
   width: 100%;
   height: 60vh;
 }
+
+.errorlist {
+  list-style-type: none;
+  color: red;
+  font-size: small;
+}

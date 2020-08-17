@@ -3,9 +3,13 @@ beautifulsoup4==4.9.1
 Django==3.1
 django-pygmentify==0.3.7
 django-pygments==0.4
+django-ranged-response==0.2.0
+django-simple-captcha==0.5.12
+Pillow==7.2.0
 psycopg2==2.8.5
 Pygments==2.6.1
 python-dotenv==0.14.0
 pytz==2020.1
+six==1.15.0
 soupsieve==2.0.1
 sqlparse==0.3.1
