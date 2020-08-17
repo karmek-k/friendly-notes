@@ -4,6 +4,7 @@ services:
   db:
     image: postgres:12
     environment:
+      # Change this when deploying
       - POSTGRES_DB=friendly_notes
       - POSTGRES_USER=friendly_notes
       - POSTGRES_PASSWORD=password
@@ -11,6 +12,7 @@ services:
     build: .
     command: >
       bash -c "cd friendly_notes && python3 manage.py migrate 
+      && python3 manage.py compilemessages
       && python3 manage.py runserver 0:8000"
     volumes:
       - .:/app
