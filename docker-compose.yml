@@ -4,10 +4,9 @@ services:
   db:
     image: postgres:12
     environment:
-      # Change this when deploying
-      - POSTGRES_DB=friendly_notes
-      - POSTGRES_USER=friendly_notes
-      - POSTGRES_PASSWORD=password
+      - POSTGRES_DB=${DB_NAME}
+      - POSTGRES_USER={DB_USER}
+      - POSTGRES_PASSWORD=${DB_PASSWORD}
   web:
     build: .
     command: >
@@ -19,6 +18,12 @@ services:
     ports:
       - "8000:8000"
     environment:
+      - DEBUG=${DEBUG}
+      - SECRET_KEY=${SECRET_KEY}
+      - ALLOWED_HOSTS=${ALLOWED_HOSTS}
+      - DB_NAME=${DB_NAME}
+      - DB_USER=${DB_USER}
+      - DB_PASSWORD=${DB_PASSWORD}
       - DB_HOST=db
     depends_on:
       - db
