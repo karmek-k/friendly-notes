@@ -15,8 +15,6 @@ services:
       && gunicorn friendly_notes.wsgi"
     volumes:
       - .:/app
-    ports:
-      - "8000:8000"
     environment:
       - DEBUG=${DEBUG}
       - SECRET_KEY=${SECRET_KEY}
@@ -27,3 +25,11 @@ services:
       - DB_HOST=db
     depends_on:
       - db
+  nginx:
+    image: nginx:1.19.2
+    ports:
+      - "80:80"
+    volumes:
+      - ./nginx:/etc/nginx/conf.d/
+    depends_on:
+      - web
