@@ -6,15 +6,16 @@ LABEL maintainer="Bartosz Gleń"
 RUN mkdir /app
 WORKDIR /app
 
-# so that the gettext function works
-RUN apt-get update -y && apt-get install -y gettext
-
 EXPOSE 8000
+
+RUN useradd user
 
 ADD requirements.txt requirements.txt
 RUN pip3 install -r requirements.txt
 
-RUN useradd user
+# so that the gettext function works
+RUN apt-get update -y && apt-get install -y gettext
+
 USER user
 
 ADD ./friendly_notes ./friendly_notes
