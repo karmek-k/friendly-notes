@@ -1,5 +1,7 @@
 # friendly-notes
 
+[Example instance](http://161.35.196.129/)
+
 ## Installation
 
 ### With docker and docker-compose
