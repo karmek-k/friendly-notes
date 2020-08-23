@@ -4,21 +4,38 @@ services:
   db:
     image: postgres:12
     environment:
-      # Change this when deploying
-      - POSTGRES_DB=friendly_notes
-      - POSTGRES_USER=friendly_notes
-      - POSTGRES_PASSWORD=password
+      - POSTGRES_DB=${DB_NAME}
+      - POSTGRES_USER={DB_USER}
+      - POSTGRES_PASSWORD=${DB_PASSWORD}
   web:
     build: .
     command: >
       bash -c "cd friendly_notes && python3 manage.py migrate 
       && python3 manage.py compilemessages
-      && python3 manage.py runserver 0:8000"
+      && python3 manage.py collectstatic --noinput
+      && gunicorn friendly_notes.wsgi --bind 0.0.0.0:8000"
     volumes:
       - .:/app
-    ports:
-      - "8000:8000"
+      - staticfiles:/app/friendly_notes/staticfiles
     environment:
-      - DB_HOST=db
+      - DEBUG=${DEBUG}
+      - SECRET_KEY=${SECRET_KEY}
+      - ALLOWED_HOSTS=${ALLOWED_HOSTS}
+      - DB_NAME=${DB_NAME}
+      - DB_USER=${DB_USER}
+      - DB_PASSWORD=${DB_PASSWORD}
+      - DB_HOST=${DB_HOST}
     depends_on:
       - db
+  nginx:
+    image: nginx:1.19.2
+    ports:
+      - "80:80"
+    volumes:
+      - ./nginx:/etc/nginx/conf.d/
+      - staticfiles:/var/www/static
+    depends_on:
+      - web
+
+volumes:
+  staticfiles:
