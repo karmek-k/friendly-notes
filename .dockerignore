@@ -3,3 +3,4 @@ venv/
 LICENSE
 README.md
 .env
+friendly_notes/staticfiles/
