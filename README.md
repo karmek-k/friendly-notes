@@ -17,3 +17,10 @@ Run docker-compose in detached mode:
 ```
 docker-compose up -d
 ```
+
+## Technologies used
+
+- web framework: Django
+- database: PostgreSQL
+- reverse proxy: nginx
+- containerization: Docker
